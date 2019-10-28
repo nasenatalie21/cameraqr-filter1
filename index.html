@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TAPNow</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <center>
+        <div class="container-fluid header">
+            <div class="row">
+                <div class="col">
+                    <h2>TAP Now Camera</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="row margin">
+                    <div class="col">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="take-picture" accept="image/*">
+                            <label class="custom-file-label" for="take-picture">Choose a photo</label><br><br>
+                            <p>
+                                <img src="about:blank" alt="" id="show-picture">
+                            </p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="row margin">
+                    <div class="col-md-4"><label><button id="upload--image"><i class="fas fa-cloud-upload-alt"></i></button>Upload Image</label></div>
+                    <div class="col-md-4"><label><button id="save--image"><i class="fas fa-download"></i></button>Download Image</label></div>
+                    <div class="col-md-4"><label><a href="qr.html"><button id="save--image"><i class="fas fa-search"></i></button></a>QR Code Scanner</label></div>
+                </div>  
+            </div>
+    </center>
+    <script src="script.js"></script>
+</body>
+
+</html>
