@@ -69,4 +69,5 @@ button {
     border: none;
     border-radius: 5px;
     text-align: center; */
+    filter: grayscale(100%);
 }

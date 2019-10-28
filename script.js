@@ -1,9 +1,11 @@
-(function () {
+(function cameraStart() {
+    
     var takePicture = document.querySelector("#take-picture"),
         showPicture = document.querySelector("#show-picture"),
         saveImage = document.querySelector("#save--image");
-
     
+    var cloudinary = require('cloudinary').v2;
+        // var Jimp = require('jimp');
 
     if (takePicture && showPicture) {
         // Set events
@@ -22,16 +24,21 @@
 
                     // Set img src to ObjectURL
                     
-                    showPicture.src = imgURL;
-                    
 
                     // cloudinary.image(imgURL, {
                     //     overlay:"images/frame.png"
                     // });
-
-                    // cloudinary.image("sample.jpg", {overlay: {url: "http://cloudinary.com/images/old_logo.png7"}})
-
                     
+
+                    // cloudinary.image(imgURL, {
+                    //     overlay:"images:frame.png"
+                    // });
+
+                    cloudinary.saveImage(imgURL, {
+                        overlay:"images:frame.png"
+                    });
+
+                    showPicture.src = imgURL;
 
                     // Save the image to local gallery
                     saveImage.onclick = function () {
